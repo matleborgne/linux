@@ -58,3 +58,6 @@ To do this in blivet-gui :
 - Create a BTRFS partition, encrypted with LUKS **version 1**, of 50G. **Do NOT set a mountpoint** for the partition ;
 - Inside the BTRFS that just appeared, create 1 subvolume **@**, with mountpoint **/** ;
 - Optionnaly, create the **@var_log** subvolume with mountpoint **/var/log**. 
+
+
+Everything is now ready for the minimal installation.
