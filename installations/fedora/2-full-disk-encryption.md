@@ -64,7 +64,7 @@ The full disk encryption is now functional.
 However, you will have to enter your password twice during each boot.
 To avoid this, the root partition can be unlocked during boot by an embedded keyfile.
 
-### Implement the encryption of /boot
+### Set an embedded keyfile to unlock root
 
 Replace the variables with your own case.
 
@@ -73,5 +73,22 @@ Replace the variables with your own case.
 ROOT="/dev/nvme0n1p2"
 KEY="/etc/keys/keyfile.key"
 
+# Keyfile creation
+mkdir /etc/keys
+openssl genrsa -out $KEY 2048
+chown -R 400 /etc/keys
 
+# Add the key to the LUKS device
+cryptsetup luksAddKey $ROOT $KEY
+
+# CRYPTTAB - Set the keyfile
+cp /etc/crypttab /etc/crypttab.BAK
+sed -i "s/none/\/etc\/keys\/keyfile.key/g" /etc/crypttab
+
+# DRACUT - Embedded keyfile
+echo "install_items+=$KEY" >> /etc/dracut.conf.d/copy-keyfile.conf
+
+# REGENERATE all
+dracut --force --regenerate-all --verbose
+grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
 ```
