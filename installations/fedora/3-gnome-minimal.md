@@ -21,3 +21,15 @@ Thus I consider as "bloatwares" :
 We could go much deeper and talk about **evolution-data-server** (the mega manager of gnome-calendar, gnome-contacts, etc.).
 But this would lead us too far, and Fedora would not let us remove it (like Arch does).
 
+We can go with GNOME installation.
+
+### Configuration of DNF
+
+First, we will configure the DNF package manager.
+
+```ini
+echo "deltarpm=true
+max_parallel_downloads=20
+defaultyes=true 
+" >> /etc/dnf/dnf.conf
+```
