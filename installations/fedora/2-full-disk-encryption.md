@@ -13,7 +13,7 @@ This part will cover the second step : the full disk encryption (including /boot
 ### Install some utilities
 
 For this part, we will need some utilies. Some of them are probably already installed.
-```ini
+```python
 dnf install \
  cryptsetup btrfs-progs nano openssl tar \
  grub2 grub2-efi-x64-modules shim efitools
