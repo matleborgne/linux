@@ -43,8 +43,8 @@ lsblk -o NAME,MOUNTPOINTS,FSTYPE,SIZE
 NAME            MOUNTPOINTS   FSTYPE          SIZE
 nvme0n1                                     931,5G
 ...
-├─nvme0n1p13    /boot/efi     vfat            256M
-├─nvme0n1p14                  crypto_LUKS      50G
+├─nvme0n1p1     /boot/efi     vfat            256M
+├─nvme0n1p2                   crypto_LUKS      50G
 │ └─luksvg      /var/log      btrfs            50G
 │               /     
 ```
