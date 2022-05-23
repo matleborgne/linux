@@ -23,7 +23,7 @@ But this would lead us too far, and Fedora would not let us remove it (like Arch
 
 We can go with GNOME installation.
 
-### Configuration of DNF
+### Configuration of DNF and RPM Fusion
 
 First, we will configure the DNF package manager.
 
