@@ -80,10 +80,12 @@ dnf install mozilla-fira-{mono-fonts,sans-fonts}
 # Systemd services
 systemctl enable gdm
 systemctl set-default graphical.target
+
+reboot
 ```
 
 You can complete this minimal installation with some extensions :
-- pop-shell : a auto-tiling extensions, like the I3-gaps window-manager ;
+- pop-shell : a auto-tiling extension, like the I3-gaps window-manager ;
 - just-perfection : you can modify so much gnome things in there ;
 - launch-new-instance : launch a new window when you click on the dash.
 
