@@ -18,9 +18,9 @@ We will optimize the SSD by :
 - discarding, but not with the mount option in FSTAB.
 
 Indeed, I have read that too much discarding can be bad for battery life, as much as no discarding at all.
-So, we will use a systemd-timer for that.
+So, we will use a systemd-timer for that (normally already implemented in Fedora).
 
-Generally, I use this configuration :
+Generally, I use this configuration in FSTAB :
 ```ini
 BTRFS_OPTS="ssd,noatime,space_cache,commit=120,compress=zstd:1,x-systemd.device-timeout=0"
 ```
@@ -31,4 +31,15 @@ BTRFS_OPTS="ssd,noatime,space_cache,commit=120,compress=zstd"
 
 cp /etc/fstab /etc/fstab.BAK
 sed -i "/btrfs/s/compress=zstd/$BTRFS_OPTS/g" /etc/fstab
+```
+Then, we check if the discard service **fstrim.timer** is working
+
+```ini
+systemctl status fstrim.timer
+```
+
+If it is **active (waiting)** it's ok.
+Else :
+```ini
+
 ```
