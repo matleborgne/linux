@@ -30,7 +30,7 @@ systemctl enable --now sshd
 Replace the variables with your own case.
 
 ```ini
-# Set the old BOOT variable here
+# Set your variables here
 BOOT="/dev/nvme0n1p3"
 
 # Unmount the boot partition on remount it on /mnt
@@ -69,6 +69,7 @@ To avoid this, the root partition can be unlocked during boot by an embedded key
 Replace the variables with your own case.
 
 ```ini
+# Set your variables here
 ROOT="/dev/nvme0n1p2"
 KEY="/etc/keys/keyfile.key"
 
