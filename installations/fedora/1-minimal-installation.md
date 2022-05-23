@@ -4,7 +4,7 @@
 
 This guide provides instructions for a minimal installation of Fedora with :
 - full-disk encryption
-- BTRFS (on LUKS)
+- BTRFS on LUKS, or BTRFS on LVM on LUKS
 - GNOME "minimal" desktop environment
 
 This part will cover the first step : the minimal installation with the Fedora installer (Anaconda).
@@ -23,3 +23,8 @@ When, you boot into the installer :
 - choose your installation packages : **Minimal Install**
 - configure the storage with advanced option **blivet-gui**
 
+### Choose your strategy
+
+Now it's time to choose your partitioning strategy. I usually use :
+- option 1 : EFI **+** LUKS **<** BTRFS-ROOT **>** **+** LUKS **<** EXT4-HOME **>**
+- option 2 : EFI **+** LUKS **<** LVM (BTRFS-ROOT + EXT4-HOME) **>**
