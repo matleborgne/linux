@@ -35,6 +35,7 @@ Indeed, some (often graphical) installers will not appreciate at all to see a pr
 ### My choice here
 
 For this installation we will choose the option 1, without the "home" part which is not important.
+What we want to achieve is :
 
 ```ini
 lsblk -o NAME,MOUNTPOINTS,FSTYPE,SIZE
@@ -48,4 +49,7 @@ nvme0n1                                     931,5G
 │               /     
 ```
 
-t
+To do this in blivet-gui :
+1/ Create the EFI partition of 256M. Set /boot/efi mountpoint ;
+2/ Create a TEMPORARY BOOT partition, wit
+3/ Create a BTRFS partition, encrypted with LUKS **version 1**, of 50G. **Do NOT set a mountpoint** for the partition ;
