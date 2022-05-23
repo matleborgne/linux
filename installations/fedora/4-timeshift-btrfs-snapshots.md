@@ -7,9 +7,11 @@ This guide provides instructions for a minimal installation of Fedora with :
 - BTRFS on LUKS, or BTRFS on LVM on LUKS
 - GNOME "minimal" desktop environment
 
-This part will cover the first step : the minimal installation with the Fedora installer (Anaconda).
-For more information, refer to the Fedora documentation :
-https://docs.fedoraproject.org/en-US/fedora/latest/install-guide/install/Installing_Using_Anaconda/
+The installation is now completed.
+
+This part will cover an optional step : the implementation of BTRFS snapshots with Timeshift to backup your system if something goes wrong during an update for example.
 
 
-### Prepare the installer
+### Timeshift
+
+
