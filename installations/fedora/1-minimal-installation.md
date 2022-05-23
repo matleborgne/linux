@@ -13,3 +13,13 @@ https://docs.fedoraproject.org/en-US/fedora/latest/install-guide/install/Install
 
 
 ### Prepare the installer
+
+First step is to download the server version of Fedora : https://getfedora.org/en/server/download/
+Then, like any other distribution, put it on a bootable key with Ventoy, Balena Etcher, Rufus, Fedora Media Writer, etc.
+
+When, you boot into the installer :
+- choose your locales
+- configure your user account / root account
+- choose your installation packages : **Minimal Install**
+- configure the storage with advanced option **blivet-gui**
+
