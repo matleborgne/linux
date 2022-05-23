@@ -27,6 +27,13 @@ systemctl enable --now sshd
 
 ### Implement the encryption of /boot
 
+Replace the variables with your own case.
+
 ```ini
-BOOT="/dev/nvme0n1p17"
+# Set the old BOOT variable here
+BOOT="/dev/nvme0n1p3"
+
+# Unmount the boot partition on remount it on /mnt
+umount -R /boot
+mount $BOOT /mnt
 ```
