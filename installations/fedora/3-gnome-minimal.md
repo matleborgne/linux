@@ -47,3 +47,12 @@ dnf install \
 
 dnf upgrade
 ```
+
+### Installation of minimal GNOME
+```ini
+# Video drivers (according to your GPU)
+dnf install \
+  xorg-x11-drv-amdgpu #for my AMD GPU
+  #akmod-nvidia xorg-x11-drv-intel libva-vdpau-driver libvdpau-va-gl #for nvidia card
+
+```
