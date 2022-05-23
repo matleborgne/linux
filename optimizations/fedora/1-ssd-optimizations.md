@@ -1,4 +1,4 @@
-## Linux / Installations / Fedora / 5. SSD optimizations
+## Linux / Optimizations / Fedora / 1. SSD optimizations
 
 ### Preface
 
