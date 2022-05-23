@@ -47,4 +47,7 @@ GRUB_BTRFS_GRUB_DIRNAME="/boot/efi/EFI/fedora"
 GRUB_BTRFS_MKCONFIG=/usr/bin/grub2-mkconfig
 GRUB_BTRFS_SCRIPT_CHECK=grub2-script-check
 ' >> /etc/default/grub-btrfs/config
+
+# Regenerate the grub configuration to see the snapshots
+sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
 ```
