@@ -10,7 +10,34 @@ This part will cover the second step : the optimizations of battery life.
 
 ### TLP
 
-We will optimize the SSD by :
+We will optimize the battery life with **tlp** tool.
+
+```ini
+su -
+
+# Installation des paquets et services systemd
+dnf install tlp tlp-rdw powertop
+systemctl enable --now tlp
+```
 
 
 ### POWERTOP
+
+The other tool to optimize battery life (and control the Wh used) is **powertop**.
+There is a command line (powertop --auto-tune) to optimize some things for battery life, however there is no service to execute it on each system start.
+So we will create it.
+
+```ini
+echo "
+[Unit]
+Description=PowerTOP tunings
+
+[Service]
+Type=oneshot
+ExecStart=/usr/sbin/powertop --auto-tune
+
+[Install]
+WantedBy=multi-user.target" >> /etc/systemd/system/powertop.service
+
+systemctl enable --now powertop.service
+```
