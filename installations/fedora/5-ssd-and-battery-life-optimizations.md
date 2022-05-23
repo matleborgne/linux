@@ -35,11 +35,29 @@ sed -i "/btrfs/s/compress=zstd/$BTRFS_OPTS/g" /etc/fstab
 Then, we check if the discard service **fstrim.timer** is working
 
 ```ini
+systemctl enable --now fstrim.timer
 systemctl status fstrim.timer
 ```
 
 If it is **active (waiting)** it's ok.
-Else :
+Else if it raises an error :
 ```ini
+echo "
+[Unit]
+Description=Discard unused blocks once a week
+Documentation=man:fstrim
+ConditionVirtualization=!container
+ConditionPathExists=!/etc/initrd-release
 
+[Timer]
+OnCalendar=weekly
+AccuracySec=1h
+Persistent=true
+RandomizedDelaySec=6000
+
+[Install]
+WantedBy=timers.target
+" > /etc/systemd/system/timers.target.wants/fstrim.timer
+
+systemctl enable --now fstrim.timer
 ```
