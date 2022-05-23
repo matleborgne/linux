@@ -26,5 +26,12 @@ When, you boot into the installer :
 ### Choose your strategy
 
 Now it's time to choose your partitioning strategy. I usually use :
-- option 1 : EFI **+**   LUKS **<** BTRFS-ROOT **>** **+**   LUKS **<** EXT4-HOME **>**
-- option 2 : EFI **+**   LUKS **<** LVM (BTRFS-ROOT + EXT4-HOME) **>**
+- option 1 : EFI **+** LUKS **<** BTRFS-ROOT **>** **+** LUKS **<** EXT4-HOME **>**
+- option 2 : EFI **+** LUKS **<** LVM (BTRFS-ROOT + EXT4-HOME) **>**
+
+There are many options, but if, like me, you like to test multiple distributions, I advise not to use the LVM option.
+Indeed, some (often graphical) installers will not appreciate at all to see a pre-existent LVM, or simply does not officially support LVM on LUKS...
+
+### My choice here
+
+Here we go with :
