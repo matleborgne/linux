@@ -18,7 +18,7 @@ Timeshift is, with snapper, one of the most simple tool to use to take BTRFS sna
 Luckily, it is in the repositories of Fedora.
 
 ```ini
-dnf install timeshift
+sudo dnf install timeshift
 ```
 
 Then, configure the application graphically for BTRFS snapshots.
@@ -34,7 +34,7 @@ It is not in the repositories of Fedora, so we need to compile it from Github.
 
 ```ini
 # Install the tools
-dnf install git make
+sudo dnf install git make
 
 # Clone the repository and compile it
 mkdir ~/.git && cd ~/.git
