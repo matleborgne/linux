@@ -34,4 +34,18 @@ Indeed, some (often graphical) installers will not appreciate at all to see a pr
 
 ### My choice here
 
-For this installation we will choose the option 1 :
+For this installation we will choose the option 1, without the "home" part which is not important.
+
+```
+lsblk -o NAME,MOUNTPOINTS,FSTYPE,SIZE
+
+NAME            MOUNTPOINTS   FSTYPE          SIZE
+nvme0n1                                     931,5G
+...
+├─nvme0n1p13    /boot/efi     vfat            256M
+├─nvme0n1p14                  crypto_LUKS      50G
+│ └─luksvg      /var/log      btrfs            50G
+│               /     
+```
+
+t
