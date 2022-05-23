@@ -2,14 +2,11 @@
 
 ### Preface
 
-This guide provides instructions for a minimal installation of Fedora with :
-- full-disk encryption
-- BTRFS on LUKS, or BTRFS on LVM on LUKS
-- GNOME "minimal" desktop environment
+This guide provides instructions for various optimizations of Fedora, like :
+- SSD optimization ;
+- battery life optimization.
 
-The installation is now completed.
-
-This part will cover an optional step : the optimizations for SSD disks.
+This part will cover the first step : the optimizations for SSD disks.
 
 ### SSD optimizations
 
