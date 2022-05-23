@@ -42,9 +42,20 @@ tar -C /mnt --acls --xattrs --one-file-system -cf /tmp/boot.tar .
 tar -C /boot --acls --xattrs -xf /tmp/boot.tar
 rm /tmp/boot.tar
 
+# Remount /boot/efi
+mount /boot/efi
+
 # FSTAB - Comment /boot
 cp /etc/fstab /etc/fstab.BAK
 sed -i "/\/boot  /s/^/#/g" /etc/fstab
 
+# DEFAULT/GRUB modifications
+cp /etc/default/grub /etc/default/grub.BAK
+sed -i "/BLSCFG/s/true/false/g" /etc/default/grub
+echo 'GRUB_ENABLE_CRYPTODISK="y"' >> /etc/default/grub
 
+# BOOT/EFI and DRACUT regeneration
+cp /boot/efi/EFI/fedora/grub.cfg /boot/efi/EFI/fedora/grub.cfg.BAK
+dracut --force --regenerate-all --verbose
+grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
 ```
