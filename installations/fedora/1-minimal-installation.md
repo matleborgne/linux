@@ -1,4 +1,4 @@
-## Fedora installation - 1. Minimal installation
+## Linux / Installations / Fedora / 1. Minimal Installation
 
 ### Preface
 
