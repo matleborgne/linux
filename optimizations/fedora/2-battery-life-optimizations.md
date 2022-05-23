@@ -8,7 +8,7 @@ This guide provides instructions for various optimizations of Fedora, like :
 
 This part will cover the second step : the optimizations of battery life.
 
-### TLP
+### Tlp
 
 We will optimize the battery life with **tlp** tool.
 
@@ -21,7 +21,7 @@ systemctl enable --now tlp
 ```
 
 
-### POWERTOP
+### Powertop
 
 The other tool to optimize battery life (and control the Wh used) is **powertop**.
 There is a command line (powertop --auto-tune) to optimize some things for battery life, however there is no service to execute it on each system start.
