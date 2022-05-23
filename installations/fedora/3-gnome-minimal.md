@@ -83,9 +83,9 @@ systemctl set-default graphical.target
 ```
 
 You can complete this minimal installation with some extensions :
-- **pop-shell** : a auto-tiling extensions, like the I3-gaps window-manager ;
-- **just-perfection** : you can modify so much gnome things in there ;
-- **launch-new-instance** : launch a new window when you click on the dash.
+- pop-shell : a auto-tiling extensions, like the I3-gaps window-manager ;
+- just-perfection : you can modify so much gnome things in there ;
+- launch-new-instance : launch a new window when you click on the dash.
 
 ```ini
 dnf install gnome-shell-extension-{pop-shell,just-perfection,\
