@@ -52,7 +52,32 @@ dnf upgrade
 ```ini
 # Video drivers (according to your GPU)
 dnf install \
-  xorg-x11-drv-amdgpu #for my AMD GPU
-  #akmod-nvidia xorg-x11-drv-intel libva-vdpau-driver libvdpau-va-gl #for nvidia card
+ xorg-x11-drv-amdgpu #for my AMD GPU
+ #akmod-nvidia xorg-x11-drv-intel libva-vdpau-driver libvdpau-va-gl #for nvidia card
 
+# General video, hardware, and codecs
+dnf install mesa-dri-drivers glx-utils
+dnf group install "Hardware Support"
+
+# Minimal GNOME fully functional
+dnf install \
+ gnome-{shell,terminal,keyring,tweaks,extensions-app} \
+ gnome-{disk-utility,calculator,system-monitor,control-center} \
+ gnome-{calendar,contacts,weather,firmware,screenshot} \
+ gvfs gvfs-{afc,mtp,nfs,smb} seahorse p7zip-plugins \
+ xdg-{user-dirs,user-dirs-gtk,desktop-portal-gtk} \
+ plymouth-theme-charge htop
+
+# Some basic applications to complete the installation
+dnf install \
+ simple-scan nautilus blivet-gui \
+ webp-pixbuf-loader xcf-pixbuf-loader \
+ sassc git wget curl sudo evince cheese peek gnome-menus
+
+# Some fonts
+dnf install mozilla-fira-{mono-fonts,sans-fonts}
+
+# Systemd services
+systemctl enable gdm
+systemctl set-default graphical.target
 ```
