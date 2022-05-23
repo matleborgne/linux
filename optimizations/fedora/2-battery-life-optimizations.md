@@ -15,7 +15,7 @@ We will optimize the battery life with **tlp** tool.
 ```ini
 su -
 
-# Installation des paquets et services systemd
+# Installation and activation of service tlp
 dnf install tlp tlp-rdw powertop
 systemctl enable --now tlp
 ```
