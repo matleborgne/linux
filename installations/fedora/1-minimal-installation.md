@@ -32,7 +32,7 @@ Now it's time to choose your partitioning strategy. I usually use :
 There are many other options, but if, like me, you like to test multiple distributions, I advise not to use the LVM on LUKS option.
 Indeed, some (often graphical) installers will not appreciate at all to see a pre-existent LVM, or simply does not officially support LVM on LUKS...
 
-### My choice here
+### Partitionning with blivet-gui
 
 For this installation we will choose the option 1, without the "home" part which is not important.
 What we want to achieve is :
@@ -49,7 +49,12 @@ nvme0n1                                     931,5G
 │               /     
 ```
 
+Note that the Fedora installer does not allow full-disk encryption during the installation.
+So we will need a temporary boot partition of 1G, that we will transfer after that.
+
 To do this in blivet-gui :
-- Create the EFI partition of 256M. Set /boot/efi mountpoint ;
-- Create a TEMPORARY BOOT partition, wit
+- Create the EFI partition of 256M. Set **/boot/efi** mountpoint ;
+- Create a TEMPORARY BOOT partition of 1G in EXT4, with **/boot** mountpoint ;
 - Create a BTRFS partition, encrypted with LUKS **version 1**, of 50G. **Do NOT set a mountpoint** for the partition ;
+- Inside the BTRFS that just appeared, create 1 subvolume **@**, with mountpoint **/** ;
+- Optionnaly, create the **@var_log** subvolume with mountpoint **/var/log**. 
