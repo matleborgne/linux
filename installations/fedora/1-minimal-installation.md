@@ -36,7 +36,7 @@ Indeed, some (often graphical) installers will not appreciate at all to see a pr
 
 For this installation we will choose the option 1, without the "home" part which is not important.
 
-```
+```ini
 lsblk -o NAME,MOUNTPOINTS,FSTYPE,SIZE
 
 NAME            MOUNTPOINTS   FSTYPE          SIZE
