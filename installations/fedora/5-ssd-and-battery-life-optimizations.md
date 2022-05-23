@@ -14,6 +14,7 @@ This part will cover an optional step : the optimizations for SSD disks and batt
 
 ### SSD Optimizations
 
+
 Debate is existing around the diverse methods to optimize a SSD disk.
-This is the informations I acquired about that :
+These are the informations I acquired about that :
 - 
