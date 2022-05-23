@@ -31,5 +31,6 @@ First, we will configure the DNF package manager.
 echo "deltarpm=true
 max_parallel_downloads=20
 defaultyes=true 
+exclude=PackageKit abrt
 " >> /etc/dnf/dnf.conf
 ```
