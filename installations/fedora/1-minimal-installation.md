@@ -26,5 +26,5 @@ When, you boot into the installer :
 ### Choose your strategy
 
 Now it's time to choose your partitioning strategy. I usually use :
-- option 1 : EFI **+** LUKS **<** BTRFS-ROOT **>** **+** LUKS **<** EXT4-HOME **>**
-- option 2 : EFI **+** LUKS **<** LVM (BTRFS-ROOT + EXT4-HOME) **>**
+- option 1 : EFI **+**   LUKS **<** BTRFS-ROOT **>** **+**   LUKS **<** EXT4-HOME **>**
+- option 2 : EFI **+**   LUKS **<** LVM (BTRFS-ROOT + EXT4-HOME) **>**
