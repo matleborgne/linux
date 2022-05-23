@@ -50,6 +50,6 @@ nvme0n1                                     931,5G
 ```
 
 To do this in blivet-gui :
-1/ Create the EFI partition of 256M. Set /boot/efi mountpoint ;
-2/ Create a TEMPORARY BOOT partition, wit
-3/ Create a BTRFS partition, encrypted with LUKS **version 1**, of 50G. **Do NOT set a mountpoint** for the partition ;
+- Create the EFI partition of 256M. Set /boot/efi mountpoint ;
+- Create a TEMPORARY BOOT partition, wit
+- Create a BTRFS partition, encrypted with LUKS **version 1**, of 50G. **Do NOT set a mountpoint** for the partition ;
