@@ -59,3 +59,18 @@ cp /boot/efi/EFI/fedora/grub.cfg /boot/efi/EFI/fedora/grub.cfg.BAK
 dracut --force --regenerate-all --verbose
 grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
 ```
+
+The full disk encryption is now functional.
+However, you will have to enter your password twice during each boot.
+To avoid this, the root partition can be unlocked during boot by an embedded keyfile.
+
+### Implement the encryption of /boot
+
+Replace the variables with your own case.
+
+```ini
+ROOT="/dev/nvme0n1p2"
+KEY="/etc/keys/keyfile.key"
+
+
+```
