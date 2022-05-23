@@ -1,4 +1,4 @@
-## Linux / Installations / Fedora / 5. SSD and Battery life optimizations
+## Linux / Installations / Fedora / 5. SSD optimizations
 
 ### Preface
 
@@ -9,7 +9,7 @@ This guide provides instructions for a minimal installation of Fedora with :
 
 The installation is now completed.
 
-This part will cover an optional step : the optimizations for SSD disks and battery life.
+This part will cover an optional step : the optimizations for SSD disks.
 
 ### SSD optimizations
 
