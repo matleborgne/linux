@@ -1,0 +1,18 @@
+## Linux / Installations / Fedora / 3. GNOME minimal
+
+### Preface
+
+This guide provides instructions for a minimal installation of Fedora with :
+- full-disk encryption
+- BTRFS on LUKS, or BTRFS on LVM on LUKS
+- GNOME "minimal" desktop environment
+
+This part will cover the third step : the minimal installation of GNOME.
+
+### My idea of GNOME
+
+I like to have "clean" desktop environments. However, Fedora Workstation comes with too many "bloatwares".
+Coming from ArchLinux, I am very demanding with every "heavy" package that work on my system.
+
+Thus I consider as "bloatwares" :
+- 
