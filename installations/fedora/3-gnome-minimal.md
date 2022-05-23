@@ -28,6 +28,8 @@ We can go with GNOME installation.
 First, we will configure the DNF package manager.
 
 ```ini
+su -
+
 echo "deltarpm=true
 max_parallel_downloads=20
 defaultyes=true 
