@@ -20,6 +20,15 @@ dnf install tlp tlp-rdw powertop
 systemctl enable --now tlp
 ```
 
+Tlp is now working. Then we can improve the efficiency by modifying the **/etc/tlp.conf**
+The configuration is different if you have an AMD Ryzen CPU, Intel i*, etc.
+
+This is mine, for an AMD Ryzen 5800H CPU
+```ini
+
+```
+
+
 
 ### Powertop
 
